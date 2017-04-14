@@ -1,5 +1,5 @@
 @ECHO OFF
-:Menu
+:MENU
 CLS
 ECHO *************************************************
 ECHO * Choose one of the following                   *
@@ -20,7 +20,7 @@ IF "%Selection%" EQU "1" (
 			ECHO.
 			ECHO.
 			PAUSE
-			GOTO Menu
+			GOTO MENU
 		)
 	)
 :ONE
@@ -41,10 +41,10 @@ TITLE LOST
 ECHO Press M to go to the menu
 SET /P Selection2="Please enter selection:"
 IF "%Selection2%" EQU "M" (
-	GOTO Menu
+	GOTO MENU
 	) ELSE (
 		IF "%Selection2%" EQU "m" (
-		GOTO Menu
+		GOTO MENU
 		)
 	)
 	
