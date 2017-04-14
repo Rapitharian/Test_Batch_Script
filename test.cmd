@@ -1,6 +1,7 @@
 @ECHO OFF
 :MENU
 CLS
+COLOR 0A
 ECHO *************************************************
 ECHO * Choose one of the following                   *
 ECHO *                                               *
@@ -59,4 +60,5 @@ IF "%Selection2%" EQU "M" (
 
 :END	
 PAUSE
+COLOR 07
 EXIT /B
