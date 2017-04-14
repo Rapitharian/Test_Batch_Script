@@ -35,6 +35,7 @@ TITLE Thrills
 ECHO The title has been changed to Thrills
 GOTO EOF
 
+REM Poor sad lost title
 TITLE LOST
 
 :EOF
@@ -44,9 +45,18 @@ IF "%Selection2%" EQU "M" (
 	GOTO MENU
 	) ELSE (
 		IF "%Selection2%" EQU "m" (
-		GOTO MENU
+			GOTO MENU
+		) ELSE (
+			If "%Selection2%" EQU "Q" (
+				GOTO END
+			) ELSE (
+				IF "%Selection2%" EQU "q" (
+					GOTO END
+				)	
+			)
 		)
 	)
-	
+
+:END	
 PAUSE
 EXIT /B
