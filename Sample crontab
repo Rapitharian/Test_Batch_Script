@@ -1,0 +1,10 @@
+┌───────── Minute (0 - 59)
+│ ┌─────── Hour (0 - 23)
+│ │ ┌───── Day of the month (1 - 31)
+│ │ │ ┌─── Month (1 - 12)
+│ │ │ │ ┌─ Day of the week (0 - 6) (Sunday = 0 or 7)
+│ │ │ │ │
+* * * * * /path/to/command
+
+# At 6:00 PM ET check the uptime of the sever, if it is greater than 5 days (86400 seconds X 5) then reboot now.
+0 18 * * * [ $(awk '{print int($1)}' /proc/uptime) -ge 432000 ] && /sbin/shutdown -r now
